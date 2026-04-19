@@ -7,21 +7,29 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <header class="bg-gray-200 text-black px-5 py-4 lg:px-3 lg:py-2">
+    <header class="bg-gray-200 text-black px-5 py-4">
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
         <nav class="flex justify-between items-center my-3 mx-5">
             <a href="index.html" class="text-lg font-bold md:text-xl lg:text-xl">
                 Christ Mindele
             </a>
-            <a href="#" class="md:hidden"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" >
-                <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path>
-                </svg>
-            </a>
-            <ul class="hidden md:flex gap-5 md:text-normal md:items-center">
+            <ul class="hidden md:flex gap-8 md:text-lg">
                 <li><a href="cv.html" class="hover:text-blue-500">CV</a></li>|
                 <li><a href="projets.html" class="hover:text-blue-500">Projets</a></li>|
                 <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
             </ul>
+            <label for="menu-toggle" class="md:hidden cursor-pointer">
+                <svg class="block peer-checked:hidden"  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                fill="currentColor" viewBox="0 0 24 24" >
+                <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path>
+                </svg>
+            </label>
         </nav>
+        <ul class="hidden peer-checked:flex flex-col w-full bg-gray-200 p-5 gap-5 font-semibold text-xl md:hidden">
+                <li><a href="cv.html" class="hover:text-blue-500">CV</a></li>
+                <li><a href="projets.html" class="hover:text-blue-500">Projets</a></li>
+                <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+        </ul>
     </header>
      <main>
         <section class="flex items-center justify-center">
